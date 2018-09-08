@@ -16,13 +16,15 @@ if( !preg_match('/^[\w_\-]+$/', $username) ){
 }*/
 $username = "siam";
 
-$full_path = sprintf("/srv/uploads/%s/%s", $username, $filename);
+$full_path = sprintf("uploads/%s/%s", $username, $filename);
 
 if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $full_path) ){
-	header("Location: upload_success.html");
+	//header("Location: upload_success.html");
+	printf("failed");
 	exit;
 }else{
-	header("Location: upload_failure.html");
+	//header("Location: upload_failure.html");
+	printf("success");
 	exit;
 }
 
