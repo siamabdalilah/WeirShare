@@ -1,9 +1,10 @@
 <?php
 
-$filename = $_GET['file'];
+$filename = $_GET['FILE'];
+$user = $_GET['USER'];
 
-$path = "/home/".$username."/public_html/".$filename."/";
-unlink($path);
+$path = "uploads/".$user."/".$filename;
+$stat = unlink($path);
 echo "Success";
 
 ?>

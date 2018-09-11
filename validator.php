@@ -1,31 +1,25 @@
-<!DOCTYPE html>
-<head>
-<title> Validator </title>
-</head>
-<body>
-	hello
-
 <?php
 
-$user = $_POST['username']
-$checking = fopen("srv/userdata/users.txt", "r")
+	$user = $_GET['USER_NAME'];
+	$checking = fopen("users.txt", "r");
+	// srv/userdata/
+	$stat = true;
+	while (!feof($checking)) {
+		$linecheck = fgets($checking);
+		$usercheck = trim($linecheck);
+		
+		if ($user == $usercheck) {
+			header("Location: userpage.php?USER=".$user);
+			exit;
+		}
+			
+	}		
+			
+	// fclose($checking);
 
-while (!feof($checking)) {
-	$linecheck = fgets($checking);
-	$usercheck = trim($linecheck);
+	$stat = false;
+	header("Location: login.php?stat=".$stat);
 	
-	if ($user == $usercheck) {
-		exit;
-		}
-		}
-		
-		echo invalidusername
-		
-		fclose($checking);
-		
-		exit;
-?>
+	exit;
 
-</body>
-		
-		
+?>
