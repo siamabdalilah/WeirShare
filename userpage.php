@@ -26,11 +26,12 @@
 
 		<!-- NOT REALLY SURE IF THIS WILL WORK -->
 		<?php
-			for ($i = 0; $i < 10; $i = $i + 1){
+			for ($i = 0; $i < 5; $i = $i + 1){
 				printf("<br>");
 			}
 		?>
 
+		<a href = "uploadportal.php?USER=<?php printf("%s", $username)?>"> Upload Files</a><br>
 		<a href = "logout.php"> LOG OUT</a><br>
 		<a <?php printf("href = \"deleteuser.php?USER=%s\"", $username); ?> > DELETE USER </a>
 	</body>
