@@ -1,10 +1,12 @@
 <?php
 
-$filename = $_GET['file'];
-$path = "/home/.$username."/public_html/".$filename."/";
+$filename = $_GET['FILE'];
+$user = $_GET['USER'];
+$path = "uploads/".$user."/".$filename;
 
 $finfo = new finfo(FILEINFO_MIME_TYPE);
 $mimetype = $finfo->file($path);
+header("Content-type: ".$mimetype);
 
 readfile($path);
 

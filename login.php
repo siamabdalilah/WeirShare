@@ -14,7 +14,7 @@
         }
     ?>
 
-    <form action = "validator.php" method = "post">
+    <form action = "validator.php" method = "get">
         <label>Username:</label> <input type = "text" name = "USER_NAME" id = "USER"/>
         <input type = "submit" id = "sub"/>
     </form>
