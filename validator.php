@@ -2,6 +2,8 @@
 <head>
 <title> Validator </title>
 </head>
+<body>
+	hello
 
 <?php
 
@@ -22,6 +24,8 @@ while (!feof($checking)) {
 		fclose($checking);
 		
 		exit;
-		?>
+?>
+
+</body>
 		
 		

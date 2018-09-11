@@ -8,16 +8,15 @@
     <body>
 <!--        POSSiBle CHeesY IntRo-->
         Weird file share
-    <form>
-        <?php
-            if (isset($_GET['stat']) && $_GET['stat'] == false){
-                printf("<span id = \"inv\"> Invalid username. Please try again. <br> <br>");
-            }
-        ?>
-        <form action = "validator.php" method = "post">
-            <label>Username:</label> <input type = "text" name = "USER_NAME" id = "USER"/>
-            <input type = "submit" id = "sub"/>
-        </form>
+    <?php
+        if (isset($_GET['stat']) && $_GET['stat'] == false){
+            printf("<span id = \"inv\"> Invalid username. Please try again. <br> <br>");
+        }
+    ?>
+
+    <form action = "validator.php" method = "post">
+        <label>Username:</label> <input type = "text" name = "USER_NAME" id = "USER"/>
+        <input type = "submit" id = "sub"/>
     </form>
     </body>
 </html>
