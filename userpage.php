@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>ewd</title>
+		<title>User Page</title>
 	</head>
 	<body>
 
@@ -11,7 +11,7 @@
 		</p>
 		
 		<?php
-		$username = $_GET['USER'];
+		$username = htmlentities($_GET['USER']);
 		$path = "uploads/".$username;
 
 		$files = array_diff(scandir($path), array('.','..'));
@@ -22,5 +22,16 @@
 					<a href = \"deletefile.php?USER=%s&FILE=%s\"?>Delete </a><br>", $username, $file,$file,$username, $file);
 		};
 		?>
+
+
+		<!-- NOT REALLY SURE IF THIS WILL WORK -->
+		<?php
+			for ($i = 0; $i < 10; $i = $i + 1){
+				printf("<br>");
+			}
+		?>
+
+		<a href = "logout.php"> LOG OUT</a><br>
+		<a <?php printf("href = \"deleteuser.php?USER=%s\"", $username); ?> > DELETE USER </a>
 	</body>
 </html>

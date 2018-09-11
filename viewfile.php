@@ -1,7 +1,7 @@
 <?php
 
-$filename = $_GET['FILE'];
-$user = $_GET['USER'];
+$filename = htmlentities($_GET['FILE']);;
+$user = htmlentities($_GET['USER']);
 $path = "uploads/".$user."/".$filename;
 
 $finfo = new finfo(FILEINFO_MIME_TYPE);

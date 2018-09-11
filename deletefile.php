@@ -5,6 +5,11 @@ $user = $_GET['USER'];
 
 $path = "uploads/".$user."/".$filename;
 $stat = unlink($path);
-echo "Success";
 
+if ($stat == true){
+	header("Location: status.php?USER=".$user."&TYPE=success");
+	exit;
+}
+
+header("Location: status.php?USER=".$user."&TYPE=failure");
 ?>

@@ -1,9 +1,15 @@
 <?php
 
-	$user = $_GET['USER_NAME'];
+	$user = htmlentities($_GET['USER_NAME']);
+	$stat = true;
+	if ($user == ''){
+		$stat = false;
+		header("Location: login.php?stat=".$stat);
+		exit;
+	}
 	$checking = fopen("users.txt", "r");
 	// srv/userdata/
-	$stat = true;
+	
 	while (!feof($checking)) {
 		$linecheck = fgets($checking);
 		$usercheck = trim($linecheck);
@@ -15,7 +21,7 @@
 			
 	}		
 			
-	// fclose($checking);
+	fclose($checking);
 
 	$stat = false;
 	header("Location: login.php?stat=".$stat);
