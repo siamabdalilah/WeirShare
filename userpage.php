@@ -2,14 +2,27 @@
 
 <html>
 	<head>
-		<title>User Page</title>
+		<title>WeirShare FileView</title>
+		<link rel = "stylesheet" type = "text/css" href = "userpage.css"/>
 	</head>
-	<body>
 
-		<p>
-			Your Files
-		</p>
+	<body>
+		<div id = "top">WeirShare</div>
+		<br>
 		
+		<div>
+			<a class = "actionbuttons" href = "uploadportal.php?USER=<?php printf("%s", $username)?>"> Upload Files</a>
+			<a class = "actionbuttons" href = "login.php"> LOG OUT</a>
+			<a class = "actionbuttons" <?php printf("href = \"deleteuser.php?USER=%s\"", $username); ?> > DELETE USER </a>
+		</div>
+
+		<br><br><br><br><br>
+		<div id = "filestag">
+			Your Files:
+		</div>
+		
+		<br>
+
 		<?php
 		$username = htmlentities($_GET['USER']);
 		$path = "uploads/".$username;
@@ -24,15 +37,5 @@
 		?>
 
 
-		<!-- NOT REALLY SURE IF THIS WILL WORK -->
-		<?php
-			for ($i = 0; $i < 5; $i = $i + 1){
-				printf("<br>");
-			}
-		?>
-
-		<a href = "uploadportal.php?USER=<?php printf("%s", $username)?>"> Upload Files</a><br>
-		<a href = "logout.php"> LOG OUT</a><br>
-		<a <?php printf("href = \"deleteuser.php?USER=%s\"", $username); ?> > DELETE USER </a>
 	</body>
 </html>

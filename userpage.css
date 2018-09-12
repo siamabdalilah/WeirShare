@@ -1,0 +1,51 @@
+@import url(//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,800,700,900);
+html{
+	font-family: raleway;
+	background-color: rgb(250,250,250);
+}
+#top{
+	font-size: 50px;
+	font-style: italic;
+}
+#buttons{
+	/*height: 23px;*/
+}
+.actionbuttons{
+	float:left;
+	background-color: lightgray;
+	margin-right: 10px;
+ 	border:none;
+ 	height: 40px;
+ 	width: 150px;
+	cursor: pointer;
+	font-size: 20px;
+	/*-webkit-transform: translate(0%, 50%);*/
+	padding-top: 13px;
+	text-align: center;
+	display: inline-block;
+	-webkit-transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.actionbuttons:hover{
+	background-color: rgb(200,200,200);
+}
+
+a{
+	text-decoration: none;
+	color: rgb(156, 136, 176);
+}
+
+a:visited{
+	color: rgb(156, 136, 176);
+}
+a:hover{
+	text-shadow: 0.2px 0.2px black;
+}
+a.actionbuttons:hover{
+	/*Source: https://www.w3schools.com/css/css3_buttons.asp*/
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+
+#filestag{
+	font-size: 30px;
+}
