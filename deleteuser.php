@@ -5,7 +5,7 @@ $content = file_get_contents('users.txt');
 $content = str_replace($username,'',$content);
 file_put_contents('users.txt', $content);
 
-$path = "uploads/".$username;
+$path = "../../../../srv/uploads/".$username;
 
 $files = array_diff(scandir($path), array('.','..'));
 $stat = true;

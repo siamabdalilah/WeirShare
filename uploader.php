@@ -11,7 +11,7 @@ if( !preg_match('/^[\w_\.\-]+$/', $filename) ){
 
 $username = htmlentities($_POST['USER']);
 
-$full_path = sprintf("uploads/%s/%s", $username, $filename); //Temporary filepath for testing
+$full_path = sprintf("../../../../srv/uploads/%s/%s", $username, $filename); //Temporary filepath for testing
 // "../../../../srv/uploads/%s/%s" --> This path for amazon instance.
 
 if( move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $full_path) ){

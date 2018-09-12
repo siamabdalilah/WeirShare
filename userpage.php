@@ -7,6 +7,10 @@
 	</head>
 
 	<body>
+		<?php
+			$username = htmlentities($_GET['USER']);
+			$path = "../../../../srv/uploads/".$username;
+		?>
 		<div id = "top">WeirShare</div>
 		<br>
 		
@@ -24,8 +28,7 @@
 		<br>
 
 		<?php
-		$username = htmlentities($_GET['USER']);
-		$path = "uploads/".$username;
+		
 
 		$files = array_diff(scandir($path), array('.','..'));
 

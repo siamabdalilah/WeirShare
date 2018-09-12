@@ -15,7 +15,7 @@ while (!feof($checking)) {
 }
 
 fclose($checking);
-$path = "uploads/".$user."/";
+$path = "../../../../srv/uploads/".$user."/";
 mkdir($path);
 fwrite(fopen("users.txt", "a"), "\n".$user);
 header("Location: userpage.php?USER=".$user);

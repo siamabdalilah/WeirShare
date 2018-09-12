@@ -3,7 +3,7 @@
 $filename = $_GET['FILE'];
 $user = $_GET['USER'];
 
-$path = "uploads/".$user."/".$filename;
+$path = "../../../../srv/uploads/".$user."/".$filename;
 $stat = unlink($path);
 
 if ($stat == true){
