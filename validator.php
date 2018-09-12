@@ -7,7 +7,7 @@
 		header("Location: login.php?stat=".$stat);
 		exit;
 	}
-	$checking = fopen("users.txt", "r");
+	$checking = fopen("../../../../srv/users.txt", "r");
 	// srv/userdata/
 	
 	while (!feof($checking)) {

@@ -1,9 +1,9 @@
 <?php
 
 $username = htmlentities($_GET['USER']);
-$content = file_get_contents('users.txt');
+$content = file_get_contents('../../../../srv/users.txt');
 $content = str_replace($username,'',$content);
-file_put_contents('users.txt', $content);
+file_put_contents('../../../../srv/users.txt', $content);
 
 $path = "../../../../srv/uploads/".$username;
 

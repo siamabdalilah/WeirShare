@@ -1,7 +1,7 @@
 <?php
 
 $user = htmlentities($_GET['USR']);
-$checking = fopen("users.txt", "r");
+$checking = fopen("../../../../srv/users.txt", "r");
 // srv/userdata/
 while (!feof($checking)) {
 	$linecheck = fgets($checking);
@@ -17,7 +17,7 @@ while (!feof($checking)) {
 fclose($checking);
 $path = "../../../../srv/uploads/".$user."/";
 mkdir($path);
-fwrite(fopen("users.txt", "a"), "\n".$user);
+fwrite(fopen("../../../../srv/users.txt", "a"), "\n".$user);
 header("Location: userpage.php?USER=".$user);
 exit;
 
